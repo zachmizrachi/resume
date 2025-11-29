@@ -1,6 +1,6 @@
 %-------------------------
-% Zachary D. Mizrachi – Clean 1-page LaTeX Resume (Nov 2025 version)
-% Education first | No coursework | Leadership on its own line
+% Zachary D. Mizrachi – Robotics Resume (Nov 2025 – Optimized)
+% Experience first | 1-page | Strong action verbs | ATS-friendly
 %-------------------------
 \documentclass[letterpaper,11pt]{article}
 \usepackage{latexsym}
@@ -15,18 +15,15 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
-
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
 \addtolength{\oddsidemargin}{-0.65in}
 \addtolength{\evensidemargin}{-0.65in}
 \addtolength{\textwidth}{1.3in}
 \addtolength{\topmargin}{-.7in}
 \addtolength{\textheight}{1.4in}
-
 \urlstyle{same}
 \raggedbottom
 \raggedright
@@ -35,7 +32,6 @@
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
 \pdfgentounicode=1
 
 %----------Custom commands----------
@@ -46,16 +42,17 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
+    \textbf{#1} & \small #2 \\
     \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-6pt}
+  \end{tabular*}\vspace{-7pt}
 }
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
 
 \begin{document}
 
@@ -66,7 +63,7 @@
     \href{mailto:mizrachi.zachary@gmail.com}{\underline{mizrachi.zachary@gmail.com}} $|$
     \href{https://linkedin.com/in/zachary-mizrachi}{\underline{linkedin.com/in/zachary-mizrachi}} $|$
     \href{https://github.com/zmiz}{\underline{github.com/zmiz}} $|$
-    914-217-7753 $|$ Long Valley, NJ 
+    (914)~217-7753 $|$ Long Valley, NJ
 \end{center}
 
 %-----------EDUCATION-----------
@@ -82,60 +79,61 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Software Engineer Engineer}{08/2024 -- 11/2025}
+      {Software Engineer}{08/2024 -- 11/2025}
       {Precision Planting (AGCO Corporation) -- Tremont, IL}{}
       \resumeItemListStart
-        \resumeItem{Built J1939 CAN auto-discovery tool for OEM yield sensors -- reduced signal mapping time 90\% (days $\to$ minutes)}
-        \resumeItem{Deployed real-time OpenCV pipeline for crop stand gap detection on moving sprayers (78\% field accuracy)}
-        \resumeItem{Designed and deployed Simulink + Speedgoat HIL test system replaying CAN/analog/digital signals}
-        \resumeItem{Created IMU + RTK-GPS sensor fusion for planter bar angle misalignment detection and correction}
-        \resumeItem{Designed chemical mixer mounting brackets in Creo Parametric (multiple field-tested iterations)}
+        \resumeItem{\textbf{Developed} J1939 CAN auto-discovery tool for third-party yield sensors, reducing OEM signal-mapping time 90\% (days $\to$ minutes)}
+        \resumeItem{\textbf{Deployed} real-time OpenCV pipeline for crop-stand gap detection on sprayers traveling $>$20 mph (78\% field accuracy)}
+        \resumeItem{\textbf{Created} IMU + RTK-GPS sensor fusion algorithm for planter bar angle misalignment detection and auto-correction}
+        \resumeItem{\textbf{Designed and validated} Simulink + Speedgoat HIL test system replaying CAN, analog, and digital signals}
+        \resumeItem{\textbf{Designed} field-tested chemical mixer mounting brackets in Creo Parametric (multiple iterations, zero failures in 2025 season)}
       \resumeItemListEnd
 
     \resumeSubheading
       {Robotics \& Automation Engineer}{01/2024 -- Present}
       {Studer Lab -- University of Illinois Urbana-Champaign}{}
       \resumeItemListStart
-        \resumeItem{Designed and operate fully autonomous 3-stage robotic workcell that singulates, 6-angle images, and pops individual popcorn kernels}
-        \resumeItem{Built custom 2-stage auger singulator, pneumatic 2-DoF arm, and turret-mounted vision system with closed-loop tracking}
-        \resumeItem{Own full stack: Fusion 360 mechanical design, Raspberry Pi/Arduino control, ROS2 + OpenCV perception, SQLite data pipeline}
-        \resumeItem{Generated 15,000+ image dataset and trained PyTorch models predicting expansion ratio and flake size}
+        \resumeItem{\textbf{Designed and operate} fully autonomous 3-stage robotic workcell that singulates, 6-angle images, and pops individual popcorn kernels}
+        \resumeItem{\textbf{Built} custom 2-stage auger singulator, pneumatic 2-DoF arm, and turret-mounted vision system with closed-loop tracking}
+        \resumeItem{\textbf{Own full stack}: Fusion 360 CAD, Raspberry Pi/Arduino control, ROS2 navigation/perception, OpenCV, SQLite data pipeline}
+        \resumeItem{\textbf{Generated} 15,000+ multi-view image dataset and trained PyTorch regression models (MAE 0.8 on expansion-ratio prediction)}
       \resumeItemListEnd
 
     \resumeSubheading
       {Robotics Engineering Intern -- Autonomous Drones}{06/2022 -- 08/2022}
       {Easy Aerial -- Brooklyn, NY}{}
       \resumeItemListStart
-        \resumeItem{Implemented and benchmarked LiDAR, stereo, and LiDAR-inertial SLAM pipelines for GPS-denied UAV navigation}
-        \resumeItem{Optimized real-time image capture with multithreading (3--4$\times$ frame rate during aggressive maneuvers)}
+        \resumeItem{\textbf{Implemented and flight-tested} LiDAR-inertial (LIO-SAM) and stereo-visual-inertial SLAM pipelines for GPS-denied warehouse navigation}
+        \resumeItem{\textbf{Optimized} real-time image capture with multithreading (3--4$\times$ frame rate increase during aggressive maneuvers)}
       \resumeItemListEnd
 
     \resumeSubheading
       {Software Engineering Intern}{06/2021 -- 08/2021}
       {The Investors Exchange (IEX) -- Manhattan, NY}{}
       \resumeItemListStart
-        \resumeItem{Revamped internal analytics dashboard using KX Dashboards -- dramatically improved performance and reduced server load}
+        \resumeItem{\textbf{Revamped} internal analytics dashboard using KX Dashboards -- dramatically improved performance and reduced server load}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-%-----------PUBLICATIONS & RESEARCH-----------
+%-----------PROJECTS-----------
 \section{Selected Projects}
   \resumeItemListStart
-    \resumeItem{\textbf{Autonomous lane-following on Polaris GEM vehicle} using adaptive stereo-vision lane detection and 3D point-cloud path planning, ECE 484, UIUC (2024)}
-    \resumeItem{\textbf{DRAGON: A Dialogue-Based Robot for Assistive Navigation with Visual Language Grounding} -- Human-Centered Autonomy Lab, UIUC (2023)}
-    \resumeItem{\textbf{A Low-Cost Implementation of ORB-SLAM and OpenCV Object Detection Using a Microsoft Kinect} -- Cornell University (2020)}
+    \resumeItem{\textbf{Autonomous lane-following on Polaris GEM e6 vehicle} -- adaptive stereo-vision lane detection with 3D point-cloud path planning (ECE 484, 2024)}
+    \resumeItem{\textbf{DRAGON} -- Dialogue-based assistive navigation robot with visual-language grounding, Human-Centered Autonomy Lab (2023)}
+    \resumeItem{\textbf{Low-cost ORB-SLAM + object detection} on Microsoft Kinect, Cornell University (2020)}
   \resumeItemListEnd
+
 
 %-----------SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Robotics \& Autonomy}{: ROS/ROS2 $\cdot$ Hardware-in-the-Loop (Simulink/Speedgoat) $\cdot$ J1939 CAN $\cdot$ SLAM $\cdot$ Sensor Fusion $\cdot$ Pneumatics $\cdot$ Real-Time Systems} \\
-     \textbf{Perception \& ML}{: OpenCV $\cdot$ PyTorch $\cdot$ YOLO $\cdot$ Industrial Cameras $\cdot$ Real-Time Edge Vision} \\
-     \textbf{Embedded \& Mechanical}{: C++ $\cdot$ Python $\cdot$ Raspberry Pi $\cdot$ Arduino/ESP32 $\cdot$ Fusion 360 $\cdot$ Creo Parametric} \\
-     \textbf{Tools}{: Git $\cdot$ Linux $\cdot$ MATLAB/Simulink $\cdot$ Docker $\cdot$ JIRA $\cdot$ Confluence} \\
-     \textbf{Leadership}{: iRobotics UIUC Team Captain (2022--2024) $\cdot$ Theta Tau Engineering Fraternity $\cdot$ Founder \& Captain, FIRST Robotics (High School)}
+     \textbf{Robotics \& Autonomy}{: ROS2 $\cdot$ SLAM (LIO-SAM, ORB-SLAM) $\cdot$ Sensor Fusion (IMU+RTK-GPS) $\cdot$ J1939 CAN $\cdot$ HIL Testing (Simulink/Speedgoat) $\cdot$ Pneumatics $\cdot$ Real-Time Systems} \\[4pt]
+     \textbf{Perception \& ML}{: OpenCV $\cdot$ PyTorch $\cdot$ YOLO $\cdot$ Industrial Cameras $\cdot$ Real-Time Edge Vision} \\[4pt]
+     \textbf{Embedded \& Mechanical}{: C++ $\cdot$ Python $\cdot$ Raspberry Pi $\cdot$ Arduino/ESP32 $\cdot$ Fusion 360 $\cdot$ Creo Parametric} \\[4pt]
+     \textbf{Tools}{: Git $\cdot$ Docker $\cdot$ Linux $\cdot$ MATLAB/Simulink $\cdot$ JIRA $\cdot$ Confluence} \\[4pt]
+     \textbf{Leadership}{: iRobotics UIUC Team Captain (2022--2024) $\cdot$ Theta Tau Professional Engineering Fraternity $\cdot$ Founder \& Captain, FIRST Robotics (High School)}
     }}
  \end{itemize}
 
